@@ -1,0 +1,88 @@
+/* Main Window Style - Light Theme */
+QMainWindow {
+    background-color: #eff1f5;
+}
+
+QWidget#centralwidget {
+    background-color: #eff1f5;
+}
+
+/* Header Label Styles */
+QLabel#stepLabel {
+    color: #7287fd;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Main Number Label Styles */
+QLabel#numberLabel {
+    color: #4c4f69;
+    font-size: 84px;
+    font-weight: bold;
+    qproperty-alignment: 'AlignCenter';
+    background-color: #e6e9ef;
+    border-radius: 20px;
+    margin: 20px;
+    border: 1px solid #dce0e8;
+}
+
+/* Button Styles */
+QPushButton {
+    background-color: #ffffff;
+    color: #4c4f69;
+    border: 2px solid #dce0e8;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #e6e9ef;
+    border-color: #7287fd;
+}
+
+QPushButton:pressed {
+    background-color: #7287fd;
+    color: #ffffff;
+}
+
+/* Progress Bar Styles */
+QProgressBar {
+    border: none;
+    background-color: #dce0e8;
+    height: 8px;
+    border-radius: 4px;
+    text-align: center;
+    color: transparent;
+}
+
+QProgressBar::chunk {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 #8839ef, stop:1 #7287fd);
+    border-radius: 4px;
+}
+
+/* Menu Bar Styles */
+QMenuBar {
+    background-color: #dce0e8;
+    color: #4c4f69;
+    padding: 2px;
+}
+
+QMenuBar::item:selected {
+    background-color: #ccd0da;
+    border-radius: 4px;
+}
+
+QMenu {
+    background-color: #ffffff;
+    color: #4c4f69;
+    border: 1px solid #dce0e8;
+}
+
+QMenu::item:selected {
+    background-color: #7287fd;
+    color: #ffffff;
+}

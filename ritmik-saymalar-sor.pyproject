@@ -1,0 +1,14 @@
+{
+    "files": [
+        "main.py",
+        "src/mainwindow.py",
+        "src/new_game_window.py",
+        "src/ui_generated/ui_form_main.py",
+        "src/ui_generated/ui_new_game.py",
+        "ui/form_main.ui",
+        "ui/form_new_game.ui",
+        "resources/styles/main.qss",
+        "resources/styles/new_game.qss",
+        "requirements.txt"
+    ]
+}
