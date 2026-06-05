@@ -1,9 +1,11 @@
 import os
 from PySide6.QtWidgets import QWidget
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from .ui_generated.ui_new_game import Ui_NewGameDialog
 
 class NewGameWindow(QWidget):
+    game_started = Signal(int, int, int)  # step, time_limit, max_errors
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self.ui = Ui_NewGameDialog()
@@ -19,12 +21,25 @@ class NewGameWindow(QWidget):
         # UI Interactions
         self.ui.btnStart.clicked.connect(self.on_start_clicked)
         
-        # Toggle spinboxes based on radio buttons
-        self.ui.radioTimed.toggled.connect(self.ui.spinTime.setEnabled)
-        self.ui.radioErrors.toggled.connect(self.ui.spinErrors.setEnabled)
+        # Hide radio buttons
+        self.ui.radioTimed.hide()
+        self.ui.radioErrors.hide()
         
-        # Initial state
-        self.ui.spinErrors.setEnabled(False)
+        # Add labels to the layouts instead of radio buttons
+        from PySide6.QtWidgets import QLabel
+        
+        time_label = QLabel("Süre Sınırı:")
+        time_label.setObjectName("timeLabel")
+        self.ui.horizontalLayout_timed.insertWidget(0, time_label)
+        
+        error_label = QLabel("Hata Sınırı:")
+        error_label.setObjectName("errorLabel")
+        self.ui.horizontalLayout_errors.insertWidget(0, error_label)
+        
+        # Enable both settings
+        self.ui.spinTime.setEnabled(True)
+        self.ui.spinErrors.setEnabled(True)
+        self.ui.modeGroupBox.setTitle("Oyun Ayarları")
 
     def load_stylesheet(self):
         # Path: resources/styles/new_game.qss
@@ -43,12 +58,16 @@ class NewGameWindow(QWidget):
             self.move(x, y)
 
     def on_start_clicked(self):
-        # This is where the game initialization logic would go
-        print("Starting new game with settings:")
-        print(f"Counting: {self.ui.countingCombo.currentText()}")
-        if self.ui.radioTimed.isChecked():
-            print(f"Mode: Timed ({self.ui.spinTime.value()} seconds)")
-        else:
-            print(f"Mode: Error Limited ({self.ui.spinErrors.value()} errors)")
+        # Extract settings
+        step_text = self.ui.countingCombo.currentText()
+        try:
+            import re
+            step = int(re.search(r'\d+', step_text).group())
+        except:
+            step = 2
+
+        time_limit = self.ui.spinTime.value()
+        max_errors = self.ui.spinErrors.value()
         
+        self.game_started.emit(step, time_limit, max_errors)
         self.close()

@@ -45,4 +45,5 @@ ENV/
 Thumbs.db
 
 # Project Specific
-commands.txt
+todo.md
+

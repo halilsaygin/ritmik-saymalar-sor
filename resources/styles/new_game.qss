@@ -131,7 +131,7 @@ QRadioButton::indicator:hover {
 
 /* Start Button */
 #btnStart {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #40a02b, stop:1 #209fb5);
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #1e66f5, stop:1 #7287fd);
     color: #ffffff;
     border: none;
     border-radius: 12px;
@@ -141,9 +141,10 @@ QRadioButton::indicator:hover {
 }
 
 #btnStart:hover {
-    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #7287fd, stop:1 #40a02b);
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #04a5e5, stop:1 #1e66f5);
 }
 
 #btnStart:pressed {
+    background-color: #1750c7;
     padding-top: 2px;
 }
