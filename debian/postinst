@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if [ -f /usr/share/pixmaps/app_icon.png ]; then
+    ln -sf /usr/share/pixmaps/app_icon.png /usr/share/pixmaps/ritmik-saymalar-sor.png
+fi
+
+#DEBHELPER#
+exit 0

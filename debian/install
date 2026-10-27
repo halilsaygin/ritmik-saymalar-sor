@@ -1,0 +1,6 @@
+main.py usr/share/ritmik-saymalar-sor/
+src usr/share/ritmik-saymalar-sor/
+resources usr/share/ritmik-saymalar-sor/
+debian/bin/ritmik-saymalar-sor usr/bin/
+ritmik-saymalar.desktop usr/share/applications/
+resources/icons/app_icon.png usr/share/pixmaps/

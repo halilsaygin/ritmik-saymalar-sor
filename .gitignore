@@ -46,4 +46,23 @@ Thumbs.db
 
 # Project Specific
 todo.md
+run_app.md
+
+# Debian build artifacts
+*.deb
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/ritmik-saymalar-sor/
+debian/*.substvars
+debian/*.log
+debian/debhelper/
+debian/tmp/
+../*.deb
+../*.changes
+../*.buildinfo
+../*.build
+../*.dsc
+../*.tar.gz
+../*.debian.tar.xz
 

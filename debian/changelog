@@ -1,0 +1,6 @@
+ritmik-saymalar-sor (1.0.0) unstable; urgency=medium
+
+  * Pardus ETAP Linux için PyGTK4 (GTK4) ile yeniden tasarlandı.
+  * Debian paket yapılandırması eklendi (Section: education).
+
+ -- halilsaygin <hllsygn357@hotmmail.com>  Fri, 16 Oct 2026 12:00:00 +0300

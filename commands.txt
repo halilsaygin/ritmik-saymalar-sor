@@ -1,5 +1,0 @@
-# Sanal ortamı aktif etmek için:
-source .venv/bin/activate
-
-# Uygulamayı çalıştırmak için:
-python main.py

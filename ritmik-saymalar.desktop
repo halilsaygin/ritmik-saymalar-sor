@@ -1,9 +1,12 @@
 [Desktop Entry]
+Version=1.0
 Type=Application
 Name=Ritmik Saymalar Sor
-Comment=Ritmik Sayma Oyunu
-Exec=/home/halilsaygin/Belgeler/Projeler/Python/ritmik-saymalar-sor/.venv/bin/python /home/halilsaygin/Belgeler/Projeler/Python/ritmik-saymalar-sor/main.py
-Icon=/home/halilsaygin/Belgeler/Projeler/Python/ritmik-saymalar-sor/resources/icons/app_icon.png
+Comment=Pardus ETAP Ritmik Sayma Eğitim Oyunu
+Exec=ritmik-saymalar-sor
+Icon=ritmik-saymalar-sor
 Terminal=false
-Categories=Game;Education;Math;
-StartupWMClass=ritmik_saymalar
+Categories=Education;Math;
+Keywords=ritmik;sayma;matematik;eğitim;etap;pardus;
+StartupNotify=true
+StartupWMClass=ritmik-saymalar-sor

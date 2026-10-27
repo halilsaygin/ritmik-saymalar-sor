@@ -1,0 +1,323 @@
+/* GTK4 Style for Ritmik Saymalar Sor (Pardus ETAP Edition) */
+
+window,
+.main-window,
+.dialog-window {
+    background-color: #eff1f5;
+    color: #4c4f69;
+    font-family: "Segoe UI", "Roboto", "Ubuntu", "Cantarell", sans-serif;
+}
+
+/* Headerbar Styling */
+headerbar {
+    background-color: #dce0e8;
+    color: #4c4f69;
+    border-bottom: 1px solid #ccd0da;
+    min-height: 46px;
+}
+
+headerbar .title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4c4f69;
+}
+
+.new-game-header-btn {
+    background-image: linear-gradient(to right, #1e66f5, #7287fd);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+}
+
+.new-game-header-btn:hover {
+    background-image: linear-gradient(to right, #04a5e5, #1e66f5);
+}
+
+.new-game-header-btn:active {
+    background-image: none;
+    background-color: #1750c7;
+}
+
+/* Status Badges (Error, Score, Step) */
+.error-badge {
+    background-color: #fcebeb;
+    color: #d20f39;
+    border: 1px solid #f9d6d6;
+    border-radius: 12px;
+    padding: 6px 16px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.score-badge {
+    background-color: #e8f5e9;
+    color: #40a02b;
+    border: 1px solid #c8e6c9;
+    border-radius: 12px;
+    padding: 6px 16px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.step-badge {
+    background-color: #eef0ff;
+    color: #7287fd;
+    border: 1px solid #dce0ff;
+    border-radius: 12px;
+    padding: 6px 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Number Card */
+.number-card {
+    color: #4c4f69;
+    font-size: 88px;
+    font-weight: bold;
+    background-color: #e6e9ef;
+    border-radius: 20px;
+    border: 2px solid #dce0e8;
+    padding: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Answer Option Buttons (ETAP Touch Friendly) */
+.option-btn {
+    background-image: none;
+    background-color: #ffffff;
+    color: #4c4f69;
+    border: 2px solid #dce0e8;
+    border-radius: 16px;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    min-width: 120px;
+    min-height: 80px;
+}
+
+.option-btn:hover {
+    background-color: #e6e9ef;
+    border-color: #7287fd;
+}
+
+.option-btn:active {
+    background-color: #7287fd;
+    color: #ffffff;
+}
+
+.option-btn-wrong {
+    background-image: none;
+    background-color: #f38ba8;
+    color: #ffffff;
+    border-color: #d20f39;
+}
+
+/* Progress Bar Styling */
+progressbar trough {
+    background-color: #dce0e8;
+    border-radius: 6px;
+    min-height: 12px;
+    border: none;
+}
+
+progressbar progress {
+    border-radius: 6px;
+    min-height: 12px;
+    border: none;
+}
+
+progressbar.progress-green progress {
+    background-image: none;
+    background-color: #40a02b;
+}
+
+progressbar.progress-yellow progress {
+    background-image: none;
+    background-color: #df8e1d;
+}
+
+progressbar.progress-red progress {
+    background-image: none;
+    background-color: #d20f39;
+}
+
+/* New Game Window Styling */
+.dialog-header {
+    color: #8839ef;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.settings-frame {
+    background-color: #ffffff;
+    border: 2px solid #dce0e8;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.settings-group-title {
+    color: #7287fd;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.field-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4c4f69;
+}
+
+.hint-label {
+    font-size: 12px;
+    font-style: italic;
+    color: #7f849c;
+}
+
+.mode-radio {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4c4f69;
+    padding: 4px 2px;
+}
+
+.mode-radio radio {
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 8px;
+}
+
+dropdown button {
+    background-color: #ffffff;
+    color: #4c4f69;
+    border: 2px solid #ccd0da;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 16px;
+    min-height: 44px;
+}
+
+spinbutton {
+    background-color: #ffffff;
+    color: #4c4f69;
+    border: 2px solid #ccd0da;
+    border-radius: 8px;
+    padding: 2px 6px;
+    font-size: 16px;
+    min-height: 46px;
+}
+
+spinbutton text {
+    min-height: 38px;
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+spinbutton button {
+    min-height: 38px;
+    min-width: 36px;
+    padding: 2px 6px;
+}
+
+.start-btn {
+    background-image: linear-gradient(to right, #1e66f5, #7287fd);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    min-height: 48px;
+}
+
+.start-btn:hover {
+    background-image: linear-gradient(to right, #04a5e5, #1e66f5);
+}
+
+.start-btn:active {
+    background-image: none;
+    background-color: #1750c7;
+}
+
+/* Game Over Dialog Styling */
+.gameover-container {
+    background-color: #eff1f5;
+    border: 2px solid #ccd0da;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.gameover-title {
+    color: #d20f39;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.gameover-msg {
+    color: #5c5f77;
+    font-size: 15px;
+}
+
+.score-card {
+    background-color: #ffffff;
+    border: 2px solid #e6e9ef;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.score-card-title {
+    color: #7c7f93;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.score-card-value {
+    color: #1e66f5;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.close-btn {
+    background-image: none;
+    background-color: #ffffff;
+    color: #4c4f69;
+    border: 2px solid #dce0e8;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 18px;
+    min-width: 115px;
+    min-height: 44px;
+}
+
+.close-btn:hover {
+    background-color: #e6e9ef;
+}
+
+.again-btn {
+    background-image: linear-gradient(to right, #1e66f5, #7287fd);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 18px;
+    min-width: 115px;
+    min-height: 44px;
+}
+
+.again-btn:hover {
+    background-image: linear-gradient(to right, #04a5e5, #1e66f5);
+}
+
+.again-btn:active {
+    background-image: none;
+    background-color: #1750c7;
+}

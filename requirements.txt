@@ -1,1 +1,1 @@
-PySide6
+PyGObject>=3.42.0

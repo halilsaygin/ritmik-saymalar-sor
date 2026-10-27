@@ -1,22 +1,32 @@
+#!/usr/bin/env python3
 import sys
-import os
-from PySide6.QtWidgets import QApplication
-from PySide6.QtGui import QIcon
+import gi
+
+gi.require_version("Gtk", "4.0")
+from gi.repository import Gtk, Gio, GLib
 from src.mainwindow import MainWindow
 
+
+class RitmikSaymalarApp(Gtk.Application):
+    def __init__(self):
+        super().__init__(
+            application_id="tr.org.pardus.etap.ritmik-saymalar-sor",
+            flags=Gio.ApplicationFlags.FLAGS_NONE,
+        )
+        GLib.set_application_name("Ritmik Saymalar Sor")
+        GLib.set_prgname("ritmik-saymalar-sor")
+
+    def do_activate(self):
+        win = self.props.active_window
+        if not win:
+            win = MainWindow(self)
+        win.present()
+
+
+def main():
+    app = RitmikSaymalarApp()
+    return app.run(sys.argv)
+
+
 if __name__ == "__main__":
-    QApplication.setApplicationName("ritmik_saymalar")
-    QApplication.setApplicationDisplayName("Ritmik Saymalar Sor")
-    QApplication.setDesktopFileName("ritmik-saymalar")
-    
-    app = QApplication(sys.argv)
-    
-    # Set application icon
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    icon_path = os.path.join(base_dir, "resources", "icons", "app_icon.png")
-    if os.path.exists(icon_path):
-        app.setWindowIcon(QIcon(icon_path))
-        
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
+    sys.exit(main())
